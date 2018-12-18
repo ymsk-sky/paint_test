@@ -1,0 +1,22 @@
+<h1>HTML5 Canvas Playground</h1>
+<section style="border": 1px solid, width: 800px;, height: 600px;>
+  <canvas id="myCanvas">
+    not works
+  </canvas>
+</section>
+<p>This is a canvas area end line.</p>
+
+<script type="text/javascript">
+  let draw = () => {
+    let canvas = document.getElementById('myCanvas');
+    if(!canvas || !canvas.getContext) {
+      return;
+    }
+    let ctx = canvas.getContext('2d');
+    ctx.strokeRect(10, 10, 50, 50);
+  };
+
+  window.onload = () => {
+    draw();
+  };
+</script>
